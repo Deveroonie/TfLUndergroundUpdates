@@ -1,7 +1,7 @@
 //let's be kind and make one request on load
 var r;
 window.addEventListener("load", (event) => {
-    axios.get("https://tfl.cxllm.uk/underground").then(function (response) {r = response.data})
+    axios.get("https://corsproxy.io/?https%3A%2F%2Ftfl.cxllm.uk%2Funderground").then(function (response) {r = response.data})
 })
 
 document.getElementById("bakerloo").addEventListener("click", function() { f("bakerloo") });

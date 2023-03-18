@@ -1,5 +1,5 @@
 window.addEventListener("load", (event) => {
-    axios.get("https://tfl.cxllm.uk/underground").then(function (response) {
+    axios.get("https://corsproxy.io/?https%3A%2F%2Ftfl.cxllm.uk%2Funderground").then(function (response) {
         const r = response.data.current_status
         const dataArray = Object.values(r);
         dataArray.forEach(l => {
