@@ -24,7 +24,7 @@ function f(apil) {
         var i = r.current_status[apil]
 
         var icon;
-        var as = "None";
+        var as = "All";
         if(i.status.includes("Good")) {icon = "success"}
         if(i.status == "Minor Delays" || i.status == "Part Closure" || i.status == "Part Suspended") {icon = "warning"}
         if(i.status == "Planned Closure" || i.status == "Severe Delays") {icon = "error"}
@@ -38,7 +38,7 @@ function f(apil) {
                     as = `${as}<br>Between ${s[0]}, ${s[1]} and ${s[2]}`
                     }
                 } else {
-                if(as == "None") {
+                if(as == "All") {
                     as = `Between ${s[0]} and ${s[1]}`
                 } else {
                 as = `${as}<br>Between ${s[0]} and ${s[1]}`
