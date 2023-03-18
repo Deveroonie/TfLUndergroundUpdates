@@ -1,0 +1,25 @@
+.wrap {
+    background-color: #282828;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.mh {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.line {
+    display: flex;
+    border-bottom: 1px solid #333232;
+}
+
+
+.circle {
+    margin: 1px;
+}
+.linetext {
+    font-size: 20px;
+}
