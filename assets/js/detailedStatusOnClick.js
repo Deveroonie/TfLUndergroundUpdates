@@ -1,7 +1,12 @@
-//let's be kind and make one request on load
 var r;
 window.addEventListener("load", (event) => {
-    axios.get("https://corsproxy.io/?https%3A%2F%2Ftfl.cxllm.uk%2Funderground").then(function (response) {r = response.data})
+    function b() {
+        axios.get("https://corsproxy.io/?https%3A%2F%2Ftfl.cxllm.uk%2Funderground").then(function (response) {r = response.data})
+    }
+    setInterval(() => {
+        b()
+      }, 2*60*1000);
+      b()
 })
 
 document.getElementById("bakerloo").addEventListener("click", function() { f("bakerloo") });
