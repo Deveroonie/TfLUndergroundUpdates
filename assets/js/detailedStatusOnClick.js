@@ -32,7 +32,7 @@ function f(apil) {
         if(i.affected_stations.length) {
             i.affected_stations.forEach(s => {
                 if(s.length == "3") {
-                    if(as == "None") {
+                    if(as == "All") {
                         as = `Between ${s[0]}, ${s[1]} and ${s[2]}`
                     } else {
                     as = `${as}<br>Between ${s[0]}, ${s[1]} and ${s[2]}`
