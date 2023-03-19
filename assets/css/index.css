@@ -1,5 +1,9 @@
-.wrap {
+html {
     background-color: #282828;
+
+}
+
+.wrap {
     color: white;
     height: 100%;
     width: 100%;
@@ -22,4 +26,10 @@
 }
 .linetext {
     font-size: 20px;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
