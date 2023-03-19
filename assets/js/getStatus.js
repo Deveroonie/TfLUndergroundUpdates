@@ -14,7 +14,7 @@ window.addEventListener("load", (event) => {
         if(l.status.includes("Good")) {status = "green"}
         if(l.status == "Minor Delays" || l.status == "Part Closure" || l.status == "Part Suspended") {status = "yellow"}
         if(l.status == "Planned Closure" || l.status == "Severe Delays") {status = "red"}
-        document.getElementById(`c_${itu}`).src = `./assets/img/SC_${status}.png`
+        document.getElementById(`c_${itu}`).src = `./assets/img/SC_${status}.webp`
       })
   })
 } catch(err) {
