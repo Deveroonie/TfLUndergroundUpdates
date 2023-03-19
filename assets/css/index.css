@@ -33,3 +33,7 @@ html {
     bottom: 0;
     width: 100%;
 }
+
+a:link, a, a:active, a:any-link {
+    color: white;
+}
