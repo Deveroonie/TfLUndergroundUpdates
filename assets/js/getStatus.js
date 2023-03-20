@@ -4,7 +4,7 @@ window.addEventListener("load", (event) => {
   }, 2*60*1000);
   function a() {
     try {
-    axios.get("https://corsproxy.io/?https%3A%2F%2Ftfl.cxllm.uk%2Funderground").then(function (response) {
+    axios.get("https://tfl.cxllm.uk/underground").then(function (response) {
       const r = response.data.current_status
       const dataArray = Object.values(r);
       dataArray.forEach(l => {
