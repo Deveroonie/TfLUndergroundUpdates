@@ -1,7 +1,7 @@
 var r;
 window.addEventListener("load", (event) => {
     function b() {
-        axios.get("https://corsproxy.io/?https%3A%2F%2Ftfl.cxllm.uk%2Funderground").then(function (response) {r = response.data})
+        axios.get("https://tfl.cxllm.uk/underground").then(function (response) {r = response.data})
     }
     setInterval(() => {
         b()
