@@ -13,7 +13,7 @@ window.addEventListener("load", (event) => {
         var status;
         if(l.status.includes("Good")) {status = "green"}
         if(l.status == "Minor Delays") {status = "yellow"}
-        if(l.status == "Planned Closure" || l.status == "Severe Delays" || l.status == "Part Closure" || l.status == "Part Suspended") {status = "red"}
+        if(l.status == "Planned Closure" || l.status == "Severe Delays" || l.status == "Part Closure" || l.status == "Part Suspended" || "Suspended") {status = "red"}
         document.getElementById(`c_${itu}`).src = `./assets/img/SC_${status}.webp`
       })
   })
