@@ -37,3 +37,7 @@ html {
 a:link, a, a:active, a:any-link {
     color: white;
 }
+
+.alert a, a:active, a:any-link {
+    color: black
+}
