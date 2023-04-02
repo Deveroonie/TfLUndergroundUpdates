@@ -13,7 +13,8 @@ window.addEventListener("load", (event) => {
         var status;
         if(l.status.includes("Good")) {status = "green"}
         if(l.status == "Minor Delays") {status = "yellow"}
-        if(l.status == "Planned Closure" || l.status == "Severe Delays" || l.status == "Part Closure" || l.status == "Part Suspended" || l.status == "Suspended") {status = "red"}
+        if(l.status == "Part Closure" || l.status == "Part Suspended" || l.status == "Severe Delays") { status = "orange"}
+        if(l.status == "Planned Closure" || l.status == "Suspended") {status = "red"}
         document.getElementById(`c_${itu}`).src = `./assets/img/SC_${status}.webp`
       })
   })

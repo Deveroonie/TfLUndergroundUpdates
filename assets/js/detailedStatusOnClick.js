@@ -32,7 +32,8 @@ function f(apil) {
         var as = "All";
         if(i.status.includes("Good")) {icon = "success"}
         if(i.status == "Minor Delays") {icon = "warning"}
-        if(i.status == "Planned Closure" || i.status == "Severe Delays" || i.status == "Part Closure" || i.status == "Part Suspended" || i.status == "Suspended") {icon = "error"}
+        if(i.status == "Part Closure" || i.status == "Part Suspended" || i.status == "Part Closure" || i.status == "Part Suspended" || i.status == "Severe Delays") { icon = "warning"}
+        if(i.status == "Planned Closure" || i.status == "Suspended") {icon = "error"}
 
         if(i.affected_stations.length) {
             i.affected_stations.forEach(s => {
