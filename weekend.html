@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TFL (Tube) Status</title>
+        <title>TFL (Tube) Status This Weekend!</title>
         <!-- SEO -->
         <meta name="title" content="TfL Status | London Underground">
-        <meta name="description" content="Status of the TfL underground network. View live data in an easy to use UI!">
+        <meta name="description" content="Status of the TfL underground network over the weekend. View live data in an easy to use UI!">
         <meta name="keywords" content="tfl,underground,londonunderground,london underground,tube,londontube,london tube">
         <meta name="robots" content="index, follow">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -36,21 +36,20 @@
         
     </head>
     <body>
-        <!-- LIBS -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" async defer></script> <!-- AXIOS (JSDELIVR) -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" async defer></script> <!-- SWEETALERT2 (JSDELIVR) -->
-        <!-- </> -->
-        <div class="wrap">
-            <div class="alert alert-warning" role="alert">
-                The privacy policy updated on 1st April 2023. I encourage you to reread the terms of service available <a href="/privacy">here</a>. If you continue to use this website, you are bound by the new policy.
-              </div>
-              
-        <h1 class="mh">TFL Network Status (Underground)</h1>
+       <!-- LIBS -->
+       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" async defer></script> <!-- AXIOS (JSDELIVR) -->
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" async defer></script> <!-- SWEETALERT2 (JSDELIVR) -->
+       <!-- </> -->
+       <div class="wrap">
+           <div class="alert alert-warning" role="alert">
+               The privacy policy updated on 1st April 2023. I encourage you to reread the terms of service available <a href="/privacy">here</a>. If you continue to use this website, you are bound by the new policy.
+             </div>
+             <h1 class="mh">TFL Network Status (Underground)</h1>
         <br>
         <p  style="text-align:center"><a href="https://deveroonie.xyz/privacy">Privacy Policy</a></p>
         <br>
         <h3 style="text-align:center">Updates every 2 minutes</h3><br><p style="text-align: center;" id="cmtlm">Click me to learn more about what the circles mean.</p><br>
-        <p style="text-align: center;"><a href="/weekend.html">Weekend Status</a></p>
+        <p style="text-align: center;"><a href="/index.html">Homepage</a></p>
         <br>
         <div class="lines">
             <div class="line" id="bakerloo">
@@ -92,21 +91,10 @@
             <div class="line" id="waterloo_and_city">
                 <img class="circle" id="c_waterloo_and_city" src="/assets/img/SC_loading.png" width="24px" height="24" alt="Status Icon">&nbsp;<h4 class="linetext">Waterloo and City</h4>
             </div>
-            
+            <!-- JS -->
+        <script src="/assets/js/weekendGetStatus.js"></script>
+        <script src="/assets/js/weekendDetailedStatusOnClick.js"></script>
         </div>
-        <!-- JS -->
-        <script src="/assets/js/getStatus.js"></script>
-        <script src="/assets/js/detailedStatusOnClick.js"></script>
-        <script src="" async defer></script>
-        <br>
-        <br>
-            <p style="text-align:left;" class="foot">
-                Click on a line to learn more about it's status.
-                <span style="float:right;">
-                    &copy; 2023 <a href="https://deveroonie.xyz">Deveroonie</a>. Click <a href="https://github.com/cxllm/tfl-status-api">here</a> to see the API used.
-                </span>
-            </p>
-            <p class="fins" style="float: left;"></p> <p style="float: right;"></p>
-    </div>
+        </div>
     </body>
 </html>
