@@ -22,6 +22,7 @@ document.getElementById("northern").addEventListener("click", function(){f("nort
 document.getElementById("piccadilly").addEventListener("click", function(){f("piccadilly")});
 document.getElementById("victoria").addEventListener("click", function(){{f("victoria")}});
 document.getElementById("waterloo_and_city").addEventListener("click", function(){f("waterlooandcity")});
+document.getElementById("cmtlm").addEventListener("click", function(){lm()})
 
 function f(apil) {
     console.log("aa")
@@ -60,4 +61,12 @@ function f(apil) {
 
         })
         
+    }
+
+    function lm() {
+        Swal.fire({
+            title: "Circle meanings",
+            html: `<div style="text-align:center;"><span style="color:green">Green</span><br>Good service - no delays!<br><span style="color: yellow;">Yellow</span><br>Minor delays.<br><span style="color:orange;">Orange</span><br>Part closure/part suspended, severe delays.<br><span style="color:red;">Red</span><br>Line fully closed.</div>`,
+            icon: "info"
+        })
     }
