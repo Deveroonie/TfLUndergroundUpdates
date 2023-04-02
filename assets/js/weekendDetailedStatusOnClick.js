@@ -28,13 +28,13 @@ function f(apil) {
     console.log("aa")
     
         var i = r.weekend_closures[apil]
-
+        const status = getPriority(i.status)
         var icon;
         var as = "All";
-        if(i.status.includes("Good")) {icon = "success"}
-        if(i.status == "Minor Delays") {icon = "warning"}
-        if(i.status == "Part Closure" || i.status == "Part Suspended" || i.status == "Part Closure" || i.status == "Part Suspended" || i.status == "Severe Delays") { icon = "warning"}
-        if(i.status == "Planned Closure" || i.status == "Suspended") {icon = "error"}
+        if(status.includes("Good")) {icon = "success"}
+        if(status == "Minor Delays") {icon = "warning"}
+        if(status == "Part Closure" || status == "Part Suspended" || status == "Severe Delays") { icon = "warning"}
+        if(status == "Planned Closure" || status == "Suspended") {icon = "error"}
 
       
             
@@ -53,4 +53,25 @@ function f(apil) {
             html: `<div style="text-align:center;"><span style="color:green">Green</span><br>Good service - no delays!<br><span style="color: yellow;">Yellow</span><br>Minor delays.<br><span style="color:orange;">Orange</span><br>Part closure/part suspended, severe delays.<br><span style="color:red;">Red</span><br>Line fully closed.</div>`,
             icon: "info"
         })
+    }
+
+    function getPriority(stat) {
+        let st = "Good Service"
+        if(stat.includes("Suspended") || stat.includes("Part Closure")) {
+            st = "Part Suspended"
+            return st;
+        }
+        if(stat.includes("Part Suspended") || stat.includes("Part Closure") && st != "Good Service") {
+            st = "Part Suspended"
+            return "Part Suspended"
+        }
+        if(stat.includes("Severe Delays")  && st != "Good Service") {
+            st = "Severe Delays"
+            return "Severe Delays"
+        }
+        if(stat.includes("Minor Delays")  && st != "Good Service" ) {
+            st = "Minor Delays"
+            return "Minor Delays"
+        }
+        return "Good Service"
     }
