@@ -26,8 +26,8 @@ window.addEventListener("load", (event) => {
   
   function getPriority(stat) {
     let st = "Good Service"
-    if(stat.includes("Suspended") || stat.includes("Part Closure")) {
-        st = "Part Suspended"
+    if(stat.includes("Suspended") || stat.includes("Planned Closure")) {
+        st = "PSuspended"
         return st;
     }
     if(stat.includes("Part Suspended") || stat.includes("Part Closure") && st != "Good Service") {
