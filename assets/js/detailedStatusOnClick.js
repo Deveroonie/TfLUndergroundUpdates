@@ -13,7 +13,6 @@ document.getElementById("bakerloo").addEventListener("click", function() { f("ba
 document.getElementById("central").addEventListener("click", function() {f("central")});
 document.getElementById("circle").addEventListener("click", function(){f("circle")});
 document.getElementById("district").addEventListener("click", function(){f("district")});
-document.getElementById("dlr").addEventListener("click", function(){f("dlr")});
 document.getElementById("elizabeth_line").addEventListener("click", function(){f("elizabethline")});
 document.getElementById("hammersmith_and_city").addEventListener("click", function(){f("hammersmithandcity")});
 document.getElementById("jubilee").addEventListener("click", function(){f("jubilee")});
