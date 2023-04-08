@@ -9,7 +9,7 @@ window.addEventListener("load", (event) => {
       const dataArray = Object.values(r);
       dataArray.forEach(l => {
         const itu = l.line.toLowerCase().replace(/ /g, "_")
-        if(itu == "overground" || itu == "trams") return;
+        if(itu == "overground" || itu == "trams" || itu == "dlr") return;
         var status;
         if(l.status.includes("Good")) {status = "green"}
         if(l.status == "Minor Delays") {status = "yellow"}
